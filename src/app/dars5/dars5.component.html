@@ -1,0 +1,71 @@
+<div class="conatiner">
+    <header>
+        <div class="header-info">
+            <div class="title">
+                <div> {{ title }}</div>
+                <div> {{ title2 }}</div>
+            </div>
+            <hr>
+            <div class="dress-info">
+                <div class="adress">
+                    <p>{{ adress }}</p>
+                    <p>{{ nuber }}</p>
+                    <p>{{ email }}</p>
+                </div>
+                <div class="letsin">
+                    <p>{{ letsinzia }}</p>
+                    <p>{{ valid }}</p>
+                    <p>{{ customer }}</p>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="show-section">
+        <div class="show-title">
+            <div>{{ show }}</div>
+            <div>{{ show2 }}</div>
+        </div>
+        <div class="show-body">
+            <ul>
+                <li *ngFor="let car of customers">
+                    {{ car.names  }} 
+                    
+                </li>
+                <li *ngFor="let car of customers">
+                    {{car.adresss }}
+                </li>
+                <li *ngFor="let car of customers">
+                    {{car.numers }}
+                </li>
+            </ul>
+            <hr>
+            <div class="show-title">
+                {{ tdesc }}
+                {{ total }}
+            </div>
+            <ul>
+                <li  [ngStyle]="{'margin': '40px 0'}"  *ngFor="let d of desc">
+                    {{d.desc}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {{ d.descTotal}}
+                </li>
+            </ul>
+            <hr>
+            <div class="show-title">
+                {{ terms }}   {{ termsTotal }}
+               
+            </div>
+            <ul>
+                <li [ngStyle]="{'margin': '10px 0'}" *ngFor="let d of term">
+                    {{ d.tname }}  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ d.tTotal}}
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="ftitle">{{ftitle}}</div>
+            <div class="lfooter">
+                <div>{{ fstr }}</div>
+                <div>{{ fstr1 }}</div>
+            </div>
+        </div>
+    </div>
+</div>
